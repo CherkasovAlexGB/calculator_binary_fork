@@ -1,6 +1,7 @@
 let num
 num=prompt('Десятичное число: ')
 let arrey=[]
+culc(num)
 
 function culc(num){
 	let i=0
