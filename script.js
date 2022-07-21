@@ -1,9 +1,9 @@
 let num
 num=prompt('Десятичное число: ')
 let arrey=[]
-culc(num)
+calc(num)
 
-function culc(num){
+function calc(num){
 	let i=0
 	for (n=num; n>=2;){
 	n=Math.trunc(num/2)
