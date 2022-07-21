@@ -43,7 +43,6 @@ function calc_multiplication(num){
 		n = num *2 
 		num = n
 		arrey[i] = Math.floor(n)
-		console.log(arrey)
 	}
 	arrey_string(arrey)
 	string2 = string
