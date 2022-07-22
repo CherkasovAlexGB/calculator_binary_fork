@@ -1,13 +1,9 @@
 let num
 num=prompt('Десятичное число: ')
 let array=[]
-<<<<<<< HEAD
-calc(num)
-=======
 let string1
 let string2
 let fractiona
->>>>>>> new_solution
 
 // Checking "integer or not" (проверка "целое число или нет")
 if (!Number.isInteger(+num)){
@@ -33,13 +29,6 @@ function calc_division(num){
 	}
 	array.push(1)
 	array.reverse()
-<<<<<<< HEAD
-	//alert(array.join(' '))
-	let res = array.join(' ')
-	let print = document.querySelector('.print')
-	print.innerHTML = `${res}`
-}
-=======
 	conversion_arrey_string(array)
 	return string
 }
@@ -72,4 +61,3 @@ function conversion_arrey_string(array){
 	string = array.join('')
 	return string
 }
->>>>>>> new_solution
