@@ -5,6 +5,7 @@ let string1
 let string2
 let fractiona
 
+// Checking "integer or not" (проверка "целое число или нет")
 if (!Number.isInteger(+num)){
 	fractional = (num % 1) 
 	num = Math.floor(num)
@@ -18,6 +19,7 @@ else{
 	calc_res(string1)
 }
 
+// Division of a part of a up to a comma (деление части числа до запятой)
 function calc_division(num){
 	let i=0
 	for (n=num; n>=2; i++){
@@ -27,10 +29,11 @@ function calc_division(num){
 	}
 	arrey.push(1)
 	arrey.reverse()
-	arrey_string(arrey)
+	conversion_arrey_string(arrey)
 	return string
 }
 
+// Translation of the part after the comma (перевод части после запятой)
 function calc_multiplication(num){
 	let i = 0
 	let n=5
@@ -40,10 +43,11 @@ function calc_multiplication(num){
 		num = (number % 1)
 		//console.log(num)
 	}
-	arrey_string(arrey)
+	conversion_arrey_string(arrey)
 	return string
 }
 
+// Output on display (вывод на экран)
 function calc_res(string1, string2) {
 	let res
 	res = string1 + ',' +string2
@@ -52,7 +56,8 @@ function calc_res(string1, string2) {
 	print.innerHTML = `${res}`
 }
 
-function arrey_string(arrey){
+// Convert array to string (конвертация массива в строку)
+function conversion_arrey_string(array
 	string = arrey.join('')
 	return string
 }
