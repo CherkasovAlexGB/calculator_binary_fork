@@ -1,6 +1,6 @@
 let num
 num=prompt('Десятичное число: ')
-let arrey=[]
+let array=[]
 let string1
 let string2
 let fractiona
@@ -24,12 +24,12 @@ function calc_division(num){
 	let i=0
 	for (n=num; n>=2; i++){
 	n=Math.trunc(num/2)
-	arrey[i] = num - n*2
+	array[i] = num - n*2
 	num=n
 	}
-	arrey.push(1)
-	arrey.reverse()
-	conversion_arrey_string(arrey)
+	array.push(1)
+	array.reverse()
+	conversion_arrey_string(array)
 	return string
 }
 
@@ -39,11 +39,11 @@ function calc_multiplication(num){
 	let n=5
 	for (number = num; i<=10; i++){
 		number = num *2 
-		arrey[i] = Math.floor(number)
+		array[i] = Math.floor(number)
 		num = (number % 1)
 		//console.log(num)
 	}
-	conversion_arrey_string(arrey)
+	conversion_arrey_string(array)
 	return string
 }
 
@@ -51,13 +51,13 @@ function calc_multiplication(num){
 function calc_res(string1, string2) {
 	let res
 	res = string1 + ',' +string2
-	console.log(res)
+	//console.log(res)
 	let print = document.querySelector('.print')
 	print.innerHTML = `${res}`
 }
 
 // Convert array to string (конвертация массива в строку)
-function conversion_arrey_string(array
-	string = arrey.join('')
+function conversion_arrey_string(array){
+	string = array.join('')
 	return string
 }
