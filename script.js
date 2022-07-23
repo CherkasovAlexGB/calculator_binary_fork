@@ -43,7 +43,7 @@ function calc_multiplication(num){
 		num = (number % 1)
 		//console.log(num)
 	}
-	conversion_arrey_string(array)
+	conversion_array_string(array)
 	return string
 }
 
@@ -57,7 +57,7 @@ function calc_res(string1, string2) {
 }
 
 // Convert array to string (конвертация массива в строку)
-function conversion_arrey_string(array){
+function conversion_array_string(array){
 	string = array.join('')
 	return string
 }
