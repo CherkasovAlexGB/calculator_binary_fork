@@ -1,35 +1,39 @@
 let num
 num=prompt('Десятичное число: ')
 let array=[]
-let string1
-let string2
-let fractiona
+let string1=[]
+//let string2
+let fractional
+let notation = 16
 
 // Checking "integer or not" (проверка "целое число или нет")
 if (!Number.isInteger(+num)){
 	fractional = (num % 1) 
 	num = Math.floor(num)
-	string1 = calc_division(num)
-	string2 = calc_multiplication(fractional)
-	calc_res(string1, string2)
+	string1[0] = calc_division(num)
+	string1[1] = calc_multiplication(fractional)
+	//calc_res(string1, string2)
+	calc_res(string1)
 }
 else{
-	calc_division(num)
-	string1 = string
+	string1[0] = calc_division(num)
 	calc_res(string1)
 }
 
 // Division of a part of a up to a comma (деление части числа до запятой)
 function calc_division(num){
 	let i=0
-	for (n=num; n>=2; i++){
-	n=Math.trunc(num/2)
-	array[i] = num - n*2
-	num=n
+	for (n=num; n>=notation; i++){
+	n=Math.trunc(num/notation)
+	array[i] = num - n*notation
+		if ((array[i]) >= 10){
+			array[i] = transform(array[i])
+		}
+		num = n
 	}
-	array.push(1)
+	//array.push(1)
 	array.reverse()
-	conversion_arrey_string(array)
+	conversion_array_string(array)
 	return string
 }
 
@@ -48,9 +52,10 @@ function calc_multiplication(num){
 }
 
 // Output on display (вывод на экран)
-function calc_res(string1, string2) {
+function calc_res(array) {
+	console.log(array[0] + ',' + array[1])
 	let res
-	res = string1 + ',' +string2
+	res = array[0] + ',' +array[1]
 	//console.log(res)
 	let print = document.querySelector('.print')
 	print.innerHTML = `${res}`
@@ -72,7 +77,7 @@ function transform(key){
 		14: "E",
 		15: "F"
 	}
-	console.log(obj[key])
-		//return obj[key]
+	//console.log(obj[key])
+	return obj[key]
 }
-transform(12)
+//transform(12)
