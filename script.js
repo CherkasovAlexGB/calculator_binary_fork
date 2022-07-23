@@ -61,3 +61,18 @@ function conversion_array_string(array){
 	string = array.join('')
 	return string
 }
+
+
+function transform(key){
+	let obj = {
+		10: "A",
+		11: "B",
+		12: "C",
+		13: "D",
+		14: "E",
+		15: "F"
+	}
+	console.log(obj[key])
+		//return obj[key]
+}
+transform(12)
