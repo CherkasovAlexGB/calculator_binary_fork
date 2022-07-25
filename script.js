@@ -3,7 +3,7 @@ num=prompt('Десятичное число: ')
 let array=[]
 let arr_string=[]
 let fractional
-let notation = 3
+let notation = 16
 
 // Checking "integer or not" (проверка "целое число или нет")
 if (!Number.isInteger(+num)){
