@@ -50,14 +50,25 @@ function calcDivision(num){
 // Translation of the part after the comma (перевод части после запятой)
 function calcMultiplication(num){
 	let i = 0
-	let n=5
+	//let n=5
 	for (number = num; i<=10; i++){
-		number = num *2 
+		number = num *16
 		array[i] = Math.floor(number)
+		console.log(num)
+		if (array[i] >= 10){
+			array[i] = transformNumber(array[i])
+			console.log(array[i])
+		}
+		// else{
+		// 	array[i] = Math.floor(number)
+		// }
+		//console.log(array[i])
 		num = (number % 1)
+		//console.log(num)
 		//console.log(num)
 	}
 	conversionArrayStr(array)
+	console.log(string)
 	return string
 }
 
